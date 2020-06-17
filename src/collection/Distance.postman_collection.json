@@ -1,0 +1,53 @@
+{
+	"id": "36e61900-6533-67b0-f7d5-88cd6ddb2377",
+	"name": "Distance",
+	"description": "Api Calculate distance",
+	"order": [
+		"7c7bc939-81d6-4b44-33e3-04bfb6ae29a8"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1582518169064,
+	"owner": "7787305",
+	"public": false,
+	"requests": [
+		{
+			"id": "7c7bc939-81d6-4b44-33e3-04bfb6ae29a8",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:5000/api/search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505",
+			"queryParams": [
+				{
+					"key": "origem",
+					"value": "-43.9353,-19.9245",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "destino",
+					"value": "-46.6333,-23.5505",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "36e61900-6533-67b0-f7d5-88cd6ddb2377",
+			"data": null,
+			"dataMode": "params",
+			"name": "GET DISTANCE",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1582518212816,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
