@@ -12,10 +12,20 @@ Api that calculates the distance between two locations!
 
 
 ### Running Node Docker
-![docker build](https://user-images.githubusercontent.com/47280551/75129652-a7ec5800-56a8-11ea-80db-e0b3f12f89bb.png)
-![node api](https://user-images.githubusercontent.com/47280551/75129655-aa4eb200-56a8-11ea-9e39-4a8ec6b65dd5.png)
 
+![docker build](https://user-images.githubusercontent.com/67064886/88506892-69d5c600-cfb1-11ea-82c0-b43d699fec8a.png)
+```
+$ docker build -t distance/node-api .
+```
 <br>
+
+![node api](https://user-images.githubusercontent.com/67064886/88506894-6a6e5c80-cfb1-11ea-8e54-98792292d3ae.png)
+```
+$ docker run -p 5000:5000 distance/node-api
+```
+<br>
+
+
 
 
 
