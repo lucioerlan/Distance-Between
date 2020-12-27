@@ -1,11 +1,11 @@
 swagger: "2.0"
 info:
-  description: '<font size="2" color="red">Licença</font>'
+  description: '<font size="2" color="red">MIT License</font>'
   version: "1.0.3"
-  title: "Api Distância"
+  title: "Distance-Between"
   license:
     name: "Erlan Lucio"
-    url: "https://github.com/erlanlucio"
+    url: "https://github.com/luciierlan"
 host: "localhost:5000"
 basePath: "/api"
 tags:
@@ -22,13 +22,11 @@ paths:
     get:
       tags:
         - "ROUTES"
-      summary: "(OSRM) Calcular Distância, Latitude e Longitude ! "
+      summary: "(OSRM) Calculate Distance, Latitude and Longitude!"
       description:
-        "Método capaz de calcular a distância entre dois pontos, passando\
-        \ LONGITUDE ORIGEM, LATITUDE ORIGEM & LONGITUDE DESTINO, LATITUDE DESTINO\
-        \ como parâmetro.<br><br> EXEMPLO:  Origem Belo Horizonte ( -43.9353,-19.9245\
-        \ )<br> Destino São Paulo ( -46.6333,-23.5505 ) <br><br> http://localhost:5000/api/search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505"
-      operationId: "searchorigem_43_9353_19_9245destino_46_6333_23_5505GET"
+        "Origem Belo Horizonte (-43.9353,-19.9245)  </br>
+         Destino São Paulo (-46.6333,-23.5505)  </br>
+         http://localhost:5000/api/search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505"
       parameters: []
       responses:
         200:
