@@ -24,8 +24,8 @@ paths:
         - "ROUTES"
       summary: "(OSRM) Calculate Distance, Latitude and Longitude!"
       description:
-        "Origem Belo Horizonte (-43.9353,-19.9245) </br>
-         Destino São Paulo (-46.6333,-23.5505) </br>
+        "Origem Belo Horizonte (-43.9353,-19.9245)  </br>
+         Destino São Paulo (-46.6333,-23.5505)  </br>
          http://localhost:5000/api/search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505"
       parameters: []
       responses:

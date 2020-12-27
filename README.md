@@ -80,7 +80,6 @@ $ docker build -t distance/node-api .
 <br>
 
 
-
 <!-- LICENSE -->
 
 ## 🔓 License
