@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  description: "<font size=\"2\" color=\"red\">Licença</font>"
+  description: '<font size="2" color="red">Licença</font>'
   version: "1.0.3"
   title: "Api Distância"
   license:
@@ -9,21 +9,22 @@ info:
 host: "localhost:5000"
 basePath: "/api"
 tags:
-- name: "ROUTES"
-  description: "<br><br>"
+  - name: "ROUTES"
+    description: "<br><br>"
 schemes:
-- "http"
+  - "http"
 consumes:
-- "application/json"
+  - "application/json"
 produces:
-- "application/json"
+  - "application/json"
 paths:
   /search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505:
     get:
       tags:
-      - "ROUTES"
+        - "ROUTES"
       summary: "(OSRM) Calcular Distância, Latitude e Longitude ! "
-      description: "Método capaz de calcular a distância entre dois pontos, passando\
+      description:
+        "Método capaz de calcular a distância entre dois pontos, passando\
         \ LONGITUDE ORIGEM, LATITUDE ORIGEM & LONGITUDE DESTINO, LATITUDE DESTINO\
         \ como parâmetro.<br><br> EXEMPLO:  Origem Belo Horizonte ( -43.9353,-19.9245\
         \ )<br> Destino São Paulo ( -46.6333,-23.5505 ) <br><br> http://localhost:5000/api/search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505"
