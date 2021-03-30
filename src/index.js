@@ -14,10 +14,10 @@ const {
   responseMiddleware,
   unauthorizedMiddleware,
   securityMiddleware,
-} = require('./src/middlewares');
+} = require('./middlewares');
 
-const CalculateRoutes = require('./src/routes/calcule-routes');
-const SwaggerRoutes = require('./src/doc/swagger-config');
+const CalculateRoutes = require('./routes/calcule-routes');
+const SwaggerRoutes = require('./doc/swagger-config');
 
 app.use(compression());
 app.use(cors());
