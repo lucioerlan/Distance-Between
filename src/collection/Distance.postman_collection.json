@@ -1,53 +1,100 @@
 {
-	"id": "36e61900-6533-67b0-f7d5-88cd6ddb2377",
-	"name": "Distance",
-	"description": "Api Calculate distance",
-	"order": [
-		"7c7bc939-81d6-4b44-33e3-04bfb6ae29a8"
-	],
-	"folders": [],
-	"folders_order": [],
-	"timestamp": 1582518169064,
-	"owner": "7787305",
-	"public": false,
-	"requests": [
+	"info": {
+		"_postman_id": "7865ffb9-a071-4d8e-8796-6edd232c7250",
+		"name": "Distance-Between",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "7c7bc939-81d6-4b44-33e3-04bfb6ae29a8",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:5000/api/search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505",
-			"queryParams": [
+			"name": "ROUTES",
+			"item": [
 				{
-					"key": "origem",
-					"value": "-43.9353,-19.9245",
-					"equals": true,
-					"description": "",
-					"enabled": true
+					"name": "LAT E LON",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/search/reverse?OriginOne=lat=-9.9765362&OriginTwo=lon=-67.8220778&DestOne=lat=-3.1316333&DestTwo=lon=-59.9825041&method=reverse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"search",
+								"reverse"
+							],
+							"query": [
+								{
+									"key": "OriginOne",
+									"value": "lat=-9.9765362"
+								},
+								{
+									"key": "OriginTwo",
+									"value": "lon=-67.8220778"
+								},
+								{
+									"key": "DestOne",
+									"value": "lat=-3.1316333"
+								},
+								{
+									"key": "DestTwo",
+									"value": "lon=-59.9825041"
+								},
+								{
+									"key": "method",
+									"value": "reverse"
+								}
+							]
+						}
+					},
+					"response": []
 				},
 				{
-					"key": "destino",
-					"value": "-46.6333,-23.5505",
-					"equals": true,
-					"description": "",
-					"enabled": true
+					"name": "ADDRESS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/search/geo?OriginOne=city=Rio Branco&OriginTwo=state=AC&DestOne=city=Manaus&DestTwo=state=AM&method=search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"search",
+								"geo"
+							],
+							"query": [
+								{
+									"key": "OriginOne",
+									"value": "city=Rio Branco"
+								},
+								{
+									"key": "OriginTwo",
+									"value": "state=AC"
+								},
+								{
+									"key": "DestOne",
+									"value": "city=Manaus"
+								},
+								{
+									"key": "DestTwo",
+									"value": "state=AM"
+								},
+								{
+									"key": "method",
+									"value": "search"
+								}
+							]
+						}
+					},
+					"response": []
 				}
-			],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "36e61900-6533-67b0-f7d5-88cd6ddb2377",
-			"data": null,
-			"dataMode": "params",
-			"name": "GET DISTANCE",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1582518212816,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
+			]
 		}
 	]
 }
