@@ -1,11 +1,33 @@
 const request = require('supertest');
-const app = require('../server');
+const app = require('../src/index');
 
-describe('Must return 200 when the source and destination exist', async () => {
-  it('Must return 200 when the source and destination exist', (done) => {
+describe('Lat and Lon Calculate', async () => {
+  it('if you can calculate the distance using Lat Lon as parameters', (done) => {
     request(app)
       .get('/api/search')
-      .query({ origem: '-43.9353,-19.9245', destino: '-46.6333,-23.5505' })
+      .query({
+        OriginOne: 'lat=-9.9765362',
+        OriginTwo: 'lon=-67.8220778',
+        DestOne: 'lat=-3.1316333',
+        DestTwo: 'lon=-59.9825041',
+        method: 'reverse',
+      })
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+});
+
+describe('Address Calculate', async () => {
+  it('if you can calculate the distance using Address as parameters', (done) => {
+    request(app)
+      .get('/api/search')
+      .query({
+        OriginOne: 'city=Rio Branco',
+        OriginTwo: 'state=AC',
+        DestOne: 'city=Manaus',
+        DestTwo: 'state=AM',
+        method: 'search',
+      })
       .expect('Content-Type', /json/)
       .expect(200, done);
   });
