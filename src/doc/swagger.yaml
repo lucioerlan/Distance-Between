@@ -25,7 +25,7 @@ paths:
         explode: true
         schema:
           type: string
-          example: lat=-9.9765362
+          example: lat=-9.8309656
       - name: OriginTwo
         in: query
         description: ''
@@ -34,7 +34,7 @@ paths:
         explode: true
         schema:
           type: string
-          example: lon=-67.8220778
+          example: lon=-67.9520886
       - name: DestOne
         in: query
         description: ''
@@ -82,7 +82,7 @@ paths:
         explode: true
         schema:
           type: string
-          example: city=Rio Branco
+          example: city=Bujari
       - name: OriginTwo
         in: query
         description: ''

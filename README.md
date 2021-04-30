@@ -15,7 +15,7 @@
 
   </h3> 
   <p align="center">
-    <img src="https://user-images.githubusercontent.com/47280551/75129017-cb61d380-56a5-11ea-838f-a65159e72aeb.png" alt="Logo" >
+    <img src="https://user-images.githubusercontent.com/67064886/116720887-1286db00-a9b3-11eb-8339-23f2d80f5ae1.png" alt="Logo" >
     <br />
     <br />
     <a href="https://github.com/lucioerlan/Distance-Between/issues">Report Bug</a>
@@ -28,8 +28,12 @@
 <!-- ABOUT THE PROJECT -->
 ## 🤔 About The Project
 
-Api responsible for calculating the distance between two locations, using the Osrm api, the parameters can be passed in this way 
-* http://localhost:5000/api/search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505
+Easily calculate the distance and time between two locations.
+
+**1-** address Method
+
+**2-** lat lon Method
+
 
 <br>
 
@@ -58,6 +62,19 @@ $ npm install
 
 <br>
 
+## 🎋 Request using CURL
+
+```
+$ curl -X GET 'http://localhost:5000/api/search/geo?OriginOne=city=Bujari&OriginTwo=state=AC&DestOne=city=Manaus&DestTwo=state=AM&method=search'
+```
+OR
+```
+$ curl -X GET 'http://localhost:5000/api/search/reverse?OriginOne=lat=-9.8309656&OriginTwo=lon=-67.9520886&DestOne=lat=-3.1316333&DestTwo=lon=-59.9825041&method=reverse'
+```
+
+
+<br>
+
 
 <!-- RUNNING -->
 
@@ -70,11 +87,7 @@ $ npm start
 #### Or Run Docker 🐳
 
 ```
-$ docker run -p 5000:5000 distance/node-api
-```
-
-```
-$ docker build -t distance/node-api .
+$ docker-compose up -d
 ```
 
 <br>

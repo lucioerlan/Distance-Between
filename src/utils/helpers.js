@@ -44,7 +44,7 @@ const OsrmUrl = async (origin, destination) => {
   return `Total distance is ${Math.round(
     routes[0].distance / 1000
   )} km and total time is ${Math.round(
-    (routes[0].duration % 3600) / 60
+    (routes[0].duration % 3600)
   )} minutes`;
 };
 

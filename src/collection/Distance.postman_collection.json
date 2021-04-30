@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/search/reverse?OriginOne=lat=-9.9765362&OriginTwo=lon=-67.8220778&DestOne=lat=-3.1316333&DestTwo=lon=-59.9825041&method=reverse",
+							"raw": "http://localhost:5000/api/search/reverse?OriginOne=lat=-9.8309656&OriginTwo=lon=-67.9520886&DestOne=lat=-3.1316333&DestTwo=lon=-59.9825041&method=reverse",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -28,11 +28,11 @@
 							"query": [
 								{
 									"key": "OriginOne",
-									"value": "lat=-9.9765362"
+									"value": "lat=-9.8309656"
 								},
 								{
 									"key": "OriginTwo",
-									"value": "lon=-67.8220778"
+									"value": "lon=-67.9520886"
 								},
 								{
 									"key": "DestOne",
@@ -57,7 +57,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/search/geo?OriginOne=city=Rio Branco&OriginTwo=state=AC&DestOne=city=Manaus&DestTwo=state=AM&method=search",
+							"raw": "http://localhost:5000/api/search/geo?OriginOne=city=Bujari&OriginTwo=state=AC&DestOne=city=Manaus&DestTwo=state=AM&method=search",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -71,7 +71,7 @@
 							"query": [
 								{
 									"key": "OriginOne",
-									"value": "city=Rio Branco"
+									"value": "city=Bujari"
 								},
 								{
 									"key": "OriginTwo",
