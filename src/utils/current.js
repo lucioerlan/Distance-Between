@@ -1,9 +1,9 @@
 const moment = require('moment-timezone');
 
 /**
- * Date and time now, time zone, formatted
- * @function datetimeNow
- */
+  * Date and time now, time zone, formatted
+  * @function datetimeNow
+  */
 
 const datetimeNow = () => {
   try {
@@ -16,5 +16,5 @@ const datetimeNow = () => {
 };
 
 module.exports = {
-  datetimeNow
+  datetimeNow,
 };

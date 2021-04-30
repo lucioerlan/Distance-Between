@@ -7,5 +7,5 @@ module.exports = {
   responseMiddleware,
   unauthorizedMiddleware,
   securityMiddleware,
-  logger
+  logger,
 };

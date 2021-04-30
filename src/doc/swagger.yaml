@@ -1,36 +1,128 @@
-swagger: "2.0"
+openapi: 3.0.0
 info:
   description: '<font size="2" color="red">MIT License</font>'
-  version: "1.0.3"
   title: "Distance-Between"
-  license:
-    name: "Erlan Lucio"
-    url: "https://github.com/luciierlan"
-host: "localhost:5000"
-basePath: "/api"
-tags:
-  - name: "ROUTES"
-    description: "<br><br>"
-schemes:
-  - "http"
-consumes:
-  - "application/json"
-produces:
-  - "application/json"
+  contact:
+    name: Erlan Lucio
+    url: https://github.com/lucioerlan
+  version: '1.0'
+servers:
+- url: http://localhost:5000/api
+  variables: {}
 paths:
-  /search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505:
+  /search/reverse:
     get:
       tags:
-        - "ROUTES"
-      summary: "(OSRM) Calculate Distance, Latitude and Longitude!"
-      description:
-        "Origem Belo Horizonte (-43.9353,-19.9245)  </br>
-         Destino São Paulo (-46.6333,-23.5505)  </br>
-         http://localhost:5000/api/search?origem=-43.9353,-19.9245&destino=-46.6333,-23.5505"
-      parameters: []
+      - ROUTES
+      summary: LAT E LON
+      operationId: LATELON
+      parameters:
+      - name: OriginOne
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: lat=-9.9765362
+      - name: OriginTwo
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: lon=-67.8220778
+      - name: DestOne
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: lat=-3.1316333
+      - name: DestTwo
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: lon=-59.9825041
+      - name: method
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: reverse
       responses:
-        200:
-          description: "Success"
-        500:
-          description: "Error"
-      x-swagger-router-controller: "ROUTES"
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /search/geo:
+    get:
+      tags:
+      - ROUTES
+      summary: ADDRESS
+      operationId: ADDRESS
+      parameters:
+      - name: OriginOne
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: city=Rio Branco
+      - name: OriginTwo
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: state=AC
+      - name: DestOne
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: city=Manaus
+      - name: DestTwo
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: state=AM
+      - name: method
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: search
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+tags:
+- name: ROUTES

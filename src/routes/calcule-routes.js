@@ -1,9 +1,8 @@
 const router = require('express').Router();
+const DistanceController = require('../controller/calcule-controller');
 
-const GetDataController = require('../controllers/calcule-controller');
+const distanceController = new DistanceController();
 
-const getDataController = new GetDataController();
-
-router.get('/search', getDataController.index);
+router.get('/search/:distance', distanceController.index);
 
 module.exports = router;

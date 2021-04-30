@@ -2,10 +2,6 @@ const helmet = require('helmet');
 const ms = require('ms');
 const uuid = require('node-uuid');
 
-/**
- * Methods manipulating Headers
- */
-
 const securityMiddleware = (app) => {
   // X-Frame-Options: https://github.com/helmetjs/frameguard
   app.use(helmet.frameguard({ action: 'deny' }));
@@ -21,7 +17,7 @@ const securityMiddleware = (app) => {
       preload: true,
     })
   );
-  
+
   // Disable etags for all requests
   app.disable('etag');
 
@@ -59,7 +55,9 @@ const securityMiddleware = (app) => {
     helmet.contentSecurityPolicy({
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self' https://www.google.com/recaptcha https://maps.googleapis.com *.gstatic.com *.google.com 'sha256-bo9tha6zSc3EpohqC68K4VzMQj+3QaDu1mM8QaiTkwQ='"],
+        scriptSrc: [
+          "'self' https://www.google.com/recaptcha https://maps.googleapis.com *.gstatic.com *.google.com 'sha256-bo9tha6zSc3EpohqC68K4VzMQj+3QaDu1mM8QaiTkwQ='",
+        ],
         styleSrc: ["'self'", (req, res) => `'nonce-${res.locals.nonce}'`],
         fontSrc: ["'self'", (req, res) => `'nonce-${res.locals.nonce}'`],
         frameSrc: ["'self'", (req, res) => `'nonce-${res.locals.nonce}'`],
