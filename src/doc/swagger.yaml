@@ -7,7 +7,7 @@ info:
     url: https://github.com/lucioerlan
   version: '1.0'
 servers:
-- url: http://localhost:5000/api
+- url: https://distance-between.herokuapp.com/api
   variables: {}
 paths:
   /search/reverse:
