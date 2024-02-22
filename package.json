@@ -11,7 +11,7 @@
     "lint": "eslint --fix --ext .js,.jsx ."
   },
   "dependencies": {
-    "axios": "^0.21.1 ",
+    "axios": "^0.28.0",
     "body-parser": "^1.19.0",
     "colors": "^1.4.0",
     "compression": "^1.7.4",
