@@ -1,5 +1,6 @@
 <!-- PROJECT SHIELDS -->
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/86c466a8c63f41299fa38a54b0f452de)](https://app.codacy.com/gh/lucioerlan/Distance-Between?utm_source=github.com&utm_medium=referral&utm_content=lucioerlan/Distance-Between&utm_campaign=Badge_Grade)
 [![PRETTIER](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://gitter.im/jlongster/prettie)
 [![LICENSE](https://img.shields.io/github/license/arshadkazmi42/awesome-github-init.svg)](https://github.com/arshadkazmi42/awesome-github-init/LICENSE)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/erlanlucio/)
